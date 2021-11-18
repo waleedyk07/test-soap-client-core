@@ -27,7 +27,8 @@ import javax.xml.soap.SOAPMessage;
 public class TestSoapClient {
 
 	static {
-		System.setProperty("javax.net.ssl.trustStore", TestSoapClient.class.getClassLoader().getResource("ePay5Client.jks").getFile());
+		System.setProperty("javax.net.ssl.trustStore",
+				TestSoapClient.class.getClassLoader().getResource("ePay5Client.jks").getFile());
 		System.setProperty("javax.net.ssl.trustStorePassword", "Change1$$");
 		System.setProperty("javax.net.ssl.keyStoreType", "JKS");
 	}
@@ -44,7 +45,7 @@ public class TestSoapClient {
 	private static final String WSU_NAMESPACE = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd";
 
 	private static final String SOAP_URL = "https://epayment.qa.dubai.ae/ePayHub/processRequestAPI";
-	private static final String SOAP_ACTION = "http://dsg.dubai.gov.ae/ws/epay/echo";
+	private static final String SOAP_ACTION = "http://dsg.dubai.gov.ae/ws/epay/generateTransactionToken";
 
 	public static void main(String[] args) throws Exception {
 
