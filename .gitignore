@@ -1,8 +1,8 @@
 # Ignore everything
-*
+/*
 
 # But not these files...
 !.gitignore
 !pom.xml
-!src/*
+!src
 !README.md
